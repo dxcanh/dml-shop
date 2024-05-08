@@ -16,6 +16,7 @@ const uploadRouter = require("./routes/uploadRoute");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 dbConnect();
 app.use(morgan("dev"));
@@ -36,6 +37,21 @@ app.use("/api/upload", uploadRouter);
 
 app.use(notFound);
 app.use(errorHandler);
+
+function notFound(req, res, next) {
+  const error= new Error(`Not Found - ${req.originalUrl}`);
+  res.status(404);
+  next(error);
+};
+
+function errorHandler(err, req, res, next) {
+  const statuscode=res.statusCode== 200 ? 500 : res.statusCode;
+  req.status(statuscode);
+  res.json({
+      message: err?.message,
+      stack: err?.stack,
+  });
+};
 app.listen(PORT, () => {
   console.log(`Server is running  at PORT ${PORT}`);
 });
