@@ -1,6 +1,7 @@
 import React from 'react';
 import BreadCrumb from '../components/BreadCrumb';
 import Meta from '../components/Meta';
+import ReactStars from 'react-rating-stars-component';
 
 const OurStore = () => {
   return <>
@@ -53,7 +54,7 @@ const OurStore = () => {
                         </div>
                         <h5 className="sub-title">Price</h5>
                         <div className='d-flex align-items-center gap-10'>
-                            <div class="form-floating mb-3">
+                            <div class="form-floating">
                                 <input 
                                     type="email" 
                                     class="form-control" 
@@ -62,7 +63,7 @@ const OurStore = () => {
                                 />
                                 <label for="floatingInput">From</label>
                             </div>
-                            <div class="form-floating mb-3">
+                            <div class="form-floating">
                                 <input 
                                     type="email" 
                                     class="form-control" 
@@ -88,20 +89,134 @@ const OurStore = () => {
                             </ul>
                         </div>
                         <h5 className="sub-title">Size</h5>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="color-1" 
+                            />
+                            <label className="form-check-label" htmlFor="color-1"> 
+                                S
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="color-1" 
+                            />
+                            <label className="form-check-label" htmlFor="color-1"> 
+                                M
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="color-1" 
+                            />
+                            <label className="form-check-label" htmlFor="color-1"> 
+                                L
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="color-1" 
+                            />
+                            <label className="form-check-label" htmlFor="color-1"> 
+                                XL
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="color-1" 
+                            />
+                            <label className="form-check-label" htmlFor="color-1"> 
+                                XXL
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div className="filter-card mb-3">
                     <h3 className="filter-title">
                         Product tags
                     </h3>
+                    <div>
+                        <div className="product-tag d-flex flex-wrap align-items-center gap-10">
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Headphone</span>
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Laptop</span>
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Smartphone</span>
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Tablet</span>
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Speaker</span>
+                            <span className="badge bg-light text-secondary rounded-3 py-2 px-3">Camera</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="filter-card mb-3">
                     <h3 className="filter-title">
                         Recommendation
                     </h3>
+                    <div>
+                        <div className="random-product d-flex mb-3">
+                            <div style={{ width: "40%" }}>
+                                <img src="images/watch.jpg" className='img-fluid' alt="watch" />
+                            </div>
+                            <div style={{ width: "60%" }}>
+                                <h5>
+                                    A great watch to buy, not to have
+                                </h5>
+                                <ReactStars count={5} size={24} value='3' edit={false} activeColor='#ffd700' />
+                                <p>$100</p>
+                            </div>
+                        </div>
+                        <div className="random-product d-flex">
+                            <div style={{ width: "40%" }}>
+                                <img src="images/watch.jpg" className='img-fluid' alt="watch" />
+                            </div>
+                            <div style={{ width: "60%" }}>
+                                <h5>
+                                    A great watch to buy, not to have
+                                </h5>
+                                <ReactStars count={5} size={24} value='3' edit={false} activeColor='#ffd700' />
+                                <p>$100</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="col-9"></div>
+            <div className="col-9">
+                <div className="filter-sort-grid">
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <div className="d-flex align-items-center gap-10">
+                            <span className="mb-0 d-block">Sort by:</span>
+                            <select
+                                className="form-select form-control"
+                                name=""
+                                id=""
+                                style={{ height: "50%" }}
+                            >
+                                <option value="manual">Default</option>
+                                <option value="best-selling">Best sold</option>
+                                <option value="A">Alphabetical ascending (A to Z)</option>
+                                <option value="Z">Alphabetical descending (Z to A)</option>
+                                <option value="cheap">Price (low to high)</option>
+                                <option value="expensive">Price (high to low)</option>
+                                <option value="earliest">Date (old to new)</option>
+                                <option value="latest">Date (new to old)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
