@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-5">
             <div className="footer-top-data d-flex gap-30 align-items-center">
-              <img src="images/newsletter.png" alt="newsletter" />
+              <img src=".//images/newsletter.png" alt="newsletter" />
               <h2 className='mb-0 text-white'>Sign up for Newsletter</h2>
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
               <address className='text-white fs-6'>
                 DXC Store <br/>
                 No. 144 Xuan Thuy, Cau Giay, 11300 <br/>
-                Vietnam 
+                Hanoi, Vietnam 
               </address>
               <a 
                 href="tel:+84 888901609" 
@@ -75,28 +75,28 @@ const Footer = () => {
           <div className="col-3">
             <h4 className='text-white mb-4'>Information</h4>
             <div className='footer-links d-flex flex-column'>
-              <Link className='text-white py-2 mb-1'>Privacy policy</Link>
-              <Link className='text-white py-2 mb-1'>Refund policy</Link>
-              <Link className='text-white py-2 mb-1'>Delivery policy</Link>
-              <Link className='text-white py-2 mb-1'>Terms & Conditions</Link>
-              <Link className='text-white py-2 mb-1'>Blogs</Link>
+              <Link to='privacy-policy' className='text-white py-2 mb-1 underline-link'>Privacy policy</Link>
+              <Link to='refund-policy' className='text-white py-2 mb-1 underline-link'>Refund policy</Link>
+              <Link to='delivery-policy' className='text-white py-2 mb-1 underline-link'>Delivery policy</Link>
+              <Link to='terms-and-conditions' className='text-white py-2 mb-1 underline-link'>Terms & Conditions</Link>
+              <Link to='blog' className='text-white py-2 mb-1 underline-link'>Blogs</Link>
             </div>
           </div>
           <div className="col-3">
             <h4 className='text-white mb-4'>Accounts</h4>
             <div className='footer-links d-flex flex-column'>
-              <Link className='text-white py-2 mb-1'>About us</Link>
-              <Link className='text-white py-2 mb-1'>FAQs</Link>
-              <Link className='text-white py-2 mb-1'>Contacts</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>About us</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>FAQs</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>Contacts</Link>
             </div>
           </div>
           <div className="col-2">
             <h4 className='text-white mb-4'>Quick Links</h4>
             <div className='footer-links d-flex flex-column'>
-              <Link className='text-white py-2 mb-1'>Laptops</Link>
-              <Link className='text-white py-2 mb-1'>Smartphones</Link>
-              <Link className='text-white py-2 mb-1'>Tablets</Link>
-              <Link className='text-white py-2 mb-1'>Headphones</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>Laptops</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>Smartphones</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>Tablets</Link>
+              <Link className='text-white py-2 mb-1 underline-link'>Headphones</Link>
             </div>
           </div>
         </div>

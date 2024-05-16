@@ -3,6 +3,7 @@ import BreadCrumb from '../components/BreadCrumb';
 import Meta from '../components/Meta';
 import ReactStars from 'react-rating-stars-component';
 import ProductCard from '../components/ProductCard';
+import Color from '../components/Color';
 
 const OurStore = () => {
     const [ grid, setGrid ] = useState(3);
@@ -78,18 +79,7 @@ const OurStore = () => {
                             </div>
                             <h5 className="sub-title">Color</h5>
                             <div>
-                                <ul className='color ps-0'>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <Color />
                             </div>
                             <h5 className="sub-title">Size</h5>
                             <div className="form-check">
@@ -171,7 +161,7 @@ const OurStore = () => {
                         <div>
                             <div className="random-product d-flex mb-3">
                                 <div style={{ width: "40%" }}>
-                                    <img src="images/watch.jpg" className='img-fluid' alt="watch" />
+                                    <img src="/images/watch.jpg" className='img-fluid' alt="watch" />
                                 </div>
                                 <div style={{ width: "60%" }}>
                                     <h5>
@@ -183,7 +173,7 @@ const OurStore = () => {
                             </div>
                             <div className="random-product d-flex">
                                 <div style={{ width: "40%" }}>
-                                    <img src="images/watch.jpg" className='img-fluid' alt="watch" />
+                                    <img src="/images/watch.jpg" className='img-fluid' alt="watch" />
                                 </div>
                                 <div style={{ width: "60%" }}>
                                     <h5>
@@ -220,28 +210,28 @@ const OurStore = () => {
                                 <p className="total-product mb-0 text-secondary">21 products</p>
                                 <div className="d-flex align-items-center gap-5p grid">
                                     <img 
-                                        src="images/gr4.svg" 
+                                        src="/images/gr4.svg" 
                                         className='d-block img-fluid' 
                                         alt="grid"
                                         onClick={() => {
                                             setGrid(3);
                                         }} />
                                     <img 
-                                        src="images/gr3.svg" 
+                                        src="/images/gr3.svg" 
                                         className='d-block img-fluid' 
                                         alt="grid"
                                         onClick={() => {
                                             setGrid(4);
                                         }} />
                                     <img 
-                                        src="images/gr2.svg" 
+                                        src="/images/gr2.svg" 
                                         className='d-block img-fluid' 
                                         alt="grid"
                                         onClick={() => {
                                             setGrid(6);
                                         }} />
                                     <img 
-                                        src="images/gr.svg" 
+                                        src="/images/gr.svg" 
                                         className='d-block img-fluid' 
                                         alt="grid"
                                         onClick={() => {

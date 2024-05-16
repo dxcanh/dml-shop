@@ -15,7 +15,7 @@ const Home = () => {
           <div className="col-6">
             <div className="main-banner position-relative">
               <img 
-                src="images/main-banner-1.jpg" 
+                src="/images/main-banner-1.jpg" 
                 className='img-fluid rounded-3' 
                 alt="main banner" 
               />
@@ -31,7 +31,7 @@ const Home = () => {
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-10">
               <div className="small-banner position-relative">
                 <img 
-                  src="images/catbanner-01.jpg" 
+                  src="/images/catbanner-01.jpg" 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -43,7 +43,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="images/catbanner-02.jpg" 
+                  src="/images/catbanner-02.jpg" 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -55,7 +55,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="images/catbanner-03.jpg" 
+                  src="/images/catbanner-03.jpg" 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -67,7 +67,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="images/catbanner-04.jpg" 
+                  src="/images/catbanner-04.jpg" 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -88,35 +88,35 @@ const Home = () => {
           <div className="col-12">
             <div className="services d-flex align-items-center justify-content-between">
               <div className='d-flex align-items-center gap-15'>
-                <img src="images/service.png" alt="services" />
+                <img src="/images/service.png" alt="services" />
                 <div>
                   <h6>Free shipping</h6>
                   <p className='mb-0'>For orders over $20</p>
                 </div>
               </div>
               <div className='d-flex align-items-center gap-15'>
-                <img src="images/service-02.png" alt="services" />
+                <img src="/images/service-02.png" alt="services" />
                 <div>
                   <h6>Surprise offers weekly</h6>
                   <p className='mb-0'>Save up to 25%</p>
                 </div>
               </div>
               <div className='d-flex align-items-center gap-15'>
-                <img src="images/service-03.png" alt="services" />
+                <img src="/images/service-03.png" alt="services" />
                 <div>
                   <h6>24/7 support</h6>
                   <p className='mb-0'>Shop with an expert</p>
                 </div>
               </div>
               <div className='d-flex align-items-center gap-15'>
-                <img src="images/service-04.png" alt="services" />
+                <img src="/images/service-04.png" alt="services" />
                 <div>
                   <h6>Affordable products</h6>
                   <p className='mb-0'>Get factory direct price</p>
                 </div>
               </div>
               <div className='d-flex align-items-center gap-15'>
-                <img src="images/service-05.png" alt="services" />
+                <img src="/images/service-05.png" alt="services" />
                 <div>
                   <h6>Secure payments</h6>
                   <p className='mb-0'>100% protected payments</p>
@@ -137,56 +137,56 @@ const Home = () => {
                   <h6>Cameras</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/camera.jpg" alt="camera" />
+                <img src="/images/camera.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart TVs</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/tv.jpg" alt="camera" />
+                <img src="/images/tv.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Speakers</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/speaker.jpg" alt="camera" />
+                <img src="/images/speaker.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Accesories</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/headphone.jpg" alt="camera" />
+                <img src="/images/headphone.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Cameras</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/camera.jpg" alt="camera" />
+                <img src="/images/camera.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart TVs</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/tv.jpg" alt="camera" />
+                <img src="/images/tv.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart watches</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/speaker.jpg" alt="camera" />
+                <img src="/images/speaker.jpg" alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Accesories</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="images/headphone.jpg" alt="camera" />
+                <img src="/images/headphone.jpg" alt="camera" />
               </div>
             </div>
           </div>
@@ -313,10 +313,20 @@ const Home = () => {
               Latest Blogs
             </h3>
           </div>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+        </div>
+        <div className="row">
+          <div className="col-3">
+            <BlogCard />
+          </div>
+          <div className="col-3">
+            <BlogCard />
+          </div>
+          <div className="col-3">
+            <BlogCard />
+          </div>
+          <div className="col-3">
+            <BlogCard />
+          </div>
         </div>
       </div>
     </section>
