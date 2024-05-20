@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import { BsFacebook, BsPinterest, BsTwitter } from 'react-icons/bs'
 import blog from '../images/blog-1.jpg'
+import Container from '../components/Container'
 
 const SingleBlog = () => {
 
     return <>
         <Meta title='Blog title'></Meta>
         <BreadCrumb title='A specific blog' />
-        <div className="blog-wrapper py-5 home-wrapper-2">
-            <div className="container-xxl">
+        <Container class1="blog-wrapper py-5 home-wrapper-2">
                 <div className="row">
                     <div className="col-3">
                         <div className="filter-card mb-3">
@@ -66,8 +66,7 @@ const SingleBlog = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>        
+        </Container>        
     </>
 }
 

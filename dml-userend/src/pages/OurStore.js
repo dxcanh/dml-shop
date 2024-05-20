@@ -11,6 +11,7 @@ import Meta from '../components/Meta';
 import ReactStars from 'react-rating-stars-component';
 import ProductCard from '../components/ProductCard';
 import Color from '../components/Color';
+import Container from '../components/Container';
 
 const OurStore = () => {
     const [ grid, setGrid ] = useState(3);
@@ -18,8 +19,7 @@ const OurStore = () => {
     return <>
         <Meta title='Our Store'></Meta>
         <BreadCrumb title='Our Store' />
-        <div className='store-wrapper py-5 home-wrapper-2'>
-        <div className="container-xxl">
+        <Container class1='store-wrapper py-5 home-wrapper-2'>
             <div className="row">
                 <div className="col-3">
                     <div className="filter-card mb-3">
@@ -258,8 +258,7 @@ const OurStore = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+        </Container>
     </>
 }
 

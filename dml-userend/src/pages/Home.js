@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </div>
     </Container>
-    <Container className="home-wrapper-2 py-5">
+    <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="services d-flex align-items-center justify-content-between">
@@ -125,8 +125,7 @@ const Home = () => {
           </div>
         </div>
     </Container>
-    <section className="home-wrapper-2 py-5">
-      <div className="container-xxl">
+    <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="categories d-flex justify-content-between align-items-center flex-wrap">
@@ -189,10 +188,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className="featured-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="featured-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">
@@ -204,10 +201,8 @@ const Home = () => {
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
-    </section>
-    <section className="famous-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="famous-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-3">
             <div className="famous-card position-relative">
@@ -250,10 +245,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className="special-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="special-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Special Products</h3>
@@ -265,10 +258,8 @@ const Home = () => {
           <SpecialProduct />
           <SpecialProduct />
         </div>
-      </div>
-    </section>
-    <section className="popular-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">
@@ -277,34 +268,24 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          {/* <div className="col-2">
-            <div className="card"></div>
-          </div>
-          <div className="col-2">
-            <div className="card"></div>
-          </div> */}
           <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
-    </section>
-    <section className="marquee-wrapper py-5">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="marquee-wrapper py-5">
         <div className="row">
           <div className="col-12">
             <div className="marquee-inner card-wrapper">
-              {/* <Marquee>
-                I can be a React component, multiple React components, or just some text.
-              </Marquee> */}
+              {/* <marquee width="60%" direction="right" height="100px">
+                This is a sample scrolling text that has scrolls in the righter direction.
+              </marquee> */}
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className="blog-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    </Container>
+    <Container class1="blog-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">
@@ -326,8 +307,7 @@ const Home = () => {
             <BlogCard />
           </div>
         </div>
-      </div>
-    </section>
+    </Container>
   </>
 }
 

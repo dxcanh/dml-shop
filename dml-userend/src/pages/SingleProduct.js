@@ -10,6 +10,7 @@ import Color from '../components/Color'
 import { Link } from 'react-router-dom'
 import { AiOutlineHeart, AiOutlineTruck } from 'react-icons/ai'
 import { HiArrowPath } from "react-icons/hi2"
+import Container from '../components/Container'
 
 const SingleProduct = () => {
     const props = { 
@@ -29,12 +30,13 @@ const SingleProduct = () => {
         textField.remove()
     }
 
+    const closeModal = () => {};
+
     return <>
         <Meta title={"The Product"} />
         <BreadCrumb title="The Product" />
-        <div className="main-product-wrapper py-5 home-wrapper-2">
-            <div className="container-xxl p-3 bg-white">
-                <div className="row">
+        <Container class1="main-product-wrapper py-5 home-wrapper-2">
+                <div className="row py-3 bg-white">
                     <div className="col-6">
                         <div className="main-product-image">
                             <div>
@@ -195,10 +197,8 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div className="description-wrapper py-5 home-wrapper-2">
-            <div className="container-xxl">
+        </Container>
+        <Container class1="description-wrapper py-5 home-wrapper-2">
                 <div className="row">
                     <div className="col-12">
                         <div className="bg-white p-3">
@@ -209,113 +209,166 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <section id='review' className="review-wrapper py-5 home-wrapper-2">
-            <div className="container-xxl">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="review-inner-wrapper">
-                            <div className="review-head d-flex justify-content-between align-items-end">
-                                <div>
-                                    <h3 className='mb-2'>Customers' reviews</h3>
-                                    <div className='d-flex align-items-center gap-10'>
-                                        <ReactStars 
-                                            count={5} 
-                                            size={36} 
-                                            value='4' 
-                                            edit={false} 
-                                            activeColor='#ffd700' 
-                                        />
-                                        <p className="mb-0">Based on 2 reviews</p>
-                                    </div>
+        </Container>
+        <Container id='review' class1="review-wrapper py-5 home-wrapper-2">
+            <div className="row">
+                <div className="col-12">
+                    <div className="review-inner-wrapper">
+                        <div className="review-head d-flex justify-content-between align-items-end">
+                            <div>
+                                <h3 className='mb-2'>Customers' reviews</h3>
+                                <div className='d-flex align-items-center gap-10'>
+                                    <ReactStars 
+                                        count={5} 
+                                        size={36} 
+                                        value='4' 
+                                        edit={false} 
+                                        activeColor='#ffd700' 
+                                    />
+                                    <p className="mb-0">Based on 2 reviews</p>
                                 </div>
-                                { orderedProduct && (
-                                    <div>
-                                        <a className='text-decoration-underline text-secondary' href="">Write a review</a>
-                                    </div>    
-                                )}
                             </div>
-                            <div className="review-form">
-                            <form action="" className='d-flex flex-column gap-15 mt-4'>
-                                <h5>Your review</h5>
+                            { orderedProduct && (
                                 <div>
-                                    <input type="text" className="form-control" placeholder='Name' />
-                                </div>
-                                <div>
-                                    <input type="text" className="form-control" placeholder='Email' />
-                                </div>
-                                <div className='review-detail'>
-                                    <div className="d-flex flex-row gap-10">
-                                        <h6 className='my-2'>Rating: </h6>
-                                        <ReactStars 
-                                            className="my-2"
-                                            count={5} 
-                                            size={24} 
-                                            value='0' 
-                                            edit={true} 
-                                            activeColor='#ffd700' 
-                                        />
-                                    </div>
-                                    <div className="my-3">
-                                        <input type="text" className="form-control" placeholder='Review title'/>
-                                    </div>
-                                    <div className="my-3">
-                                        <textarea 
-                                            name="" 
-                                            id="" 
-                                            className='w-100 form-control' 
-                                            cols="30" 
-                                            rows="10"
-                                            style={{ height: 150 }}
-                                            placeholder='Write your review here'
-                                        />
-                                    </div>
-                                    <div className="my-3 review-submit-button">
-                                        <button className="button border-0">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
+                                    <a className='text-decoration-underline text-secondary' href="">Write a review</a>
+                                </div>    
+                            )}
+                        </div>
+                        <div className="review-form">
+                        <form action="" className='d-flex flex-column gap-15 mt-4'>
+                            <h5>Your review</h5>
+                            <div>
+                                <input type="text" className="form-control" placeholder='Name' />
                             </div>
-                            <div className="reviews mt-4">
-                                <div className="review">
-                                    <div className="d-flex gap-10 align-items-center">
-                                        <h6 className="mb-0"> DX Canh </h6>
-                                        <ReactStars 
-                                            count={5} 
-                                            size={24} 
-                                            value='4' 
-                                            edit={false} 
-                                            activeColor='#ffd700' 
-                                        />
-                                    </div>
-                                    <p className="mt-3">
-                                        This is a sincere and authentic review, not a fake one. This product has not been purchased but I've been paid to promote this
-                                    </p>
+                            <div>
+                                <input type="text" className="form-control" placeholder='Email' />
+                            </div>
+                            <div className='review-detail'>
+                                <div className="d-flex flex-row gap-10">
+                                    <h6 className='my-2'>Rating: </h6>
+                                    <ReactStars 
+                                        className="my-2"
+                                        count={5} 
+                                        size={24} 
+                                        value='0' 
+                                        edit={true} 
+                                        activeColor='#ffd700' 
+                                    />
                                 </div>
+                                <div className="my-3">
+                                    <input type="text" className="form-control" placeholder='Review title'/>
+                                </div>
+                                <div className="my-3">
+                                    <textarea 
+                                        name="" 
+                                        id="" 
+                                        className='w-100 form-control' 
+                                        cols="30" 
+                                        rows="10"
+                                        style={{ height: 150 }}
+                                        placeholder='Write your review here'
+                                    />
+                                </div>
+                                <div className="my-3 review-submit-button">
+                                    <button className="button border-0">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div className="reviews mt-4">
+                            <div className="review">
+                                <div className="d-flex gap-10 align-items-center">
+                                    <h6 className="mb-0"> DX Canh </h6>
+                                    <ReactStars 
+                                        count={5} 
+                                        size={24} 
+                                        value='4' 
+                                        edit={false} 
+                                        activeColor='#ffd700' 
+                                    />
+                                </div>
+                                <p className="mt-3">
+                                    This is a sincere and authentic review, not a fake one. This product has not been purchased but I've been paid to promote this
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section className="popular-wrapper py-5 home-wrapper-2">
-            <div className="container-xxl">
-                <div className="row">
-                    <div className="col-12">
-                        <h3 className="section-heading">
-                        Products you may like
-                        </h3>
-                    </div>
-                </div>
-                <div className="row">
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+        </Container>
+        <Container class1="popular-wrapper py-5 home-wrapper-2">
+            <div className="row">
+                <div className="col-12">
+                    <h3 className="section-heading">
+                    Products you may like
+                    </h3>
                 </div>
             </div>
-        </section>
+            <div className="row">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+            </div>
+        </Container>
+
+        <div 
+            className="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby='staticBackdropLabel'
+            aria-hidden="true"
+        >
+            <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                    <div className="modal-header py-0 border-0">
+                        <button
+                            type="button"
+                            className='btn-close'
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div className="modal-body py-0">
+                        <div className="d-flex align-items-center">
+                            <div className="flex-grow-1 w-50">
+                                <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                    alt="product"
+                                    className='img-fluid'
+                                />
+                            </div>
+                            <div className="d-flex flex-column flex-grow-1 w-50">
+                                <h6 className="mb-3">Someproduct</h6>
+                                <p className="mb-1">Quantity: X</p>
+                                <p className="mb-1">Color: unknown</p>
+                                <p className="mb-1">Size: unknown</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal-footer border-0 py-0 justify-content-center gap-30">
+                        <button type="button" className='button' data-bs-dismiss="modal">
+                            View My Cart
+                        </button>
+                        <button type="button" className='button signup'>
+                            Checkout
+                        </button>
+                    </div>
+                    <div className="d-flex justify-content-center py-3">
+                        <Link
+                            className='text-dark'
+                            to='/product'
+                            onClick={() => {
+                                closeModal();
+                            }}
+                        >
+                            Continue to Shopping
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
     </>
 }
 

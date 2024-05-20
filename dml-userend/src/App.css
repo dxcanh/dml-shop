@@ -713,3 +713,27 @@ footer .input-group-text {
 
 /* Cart End */
 
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

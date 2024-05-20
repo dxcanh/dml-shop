@@ -5,21 +5,20 @@ import Breadcrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta"; 
 import Color from '../components/Color';
 import ProductCompareCard from '../components/ProductCompareCard';
+import Container from '../components/Container';
 
 const CompareProduct = () => {
   return <>
     <Meta title={"Compare Products"} />
     <Breadcrumb title="Compare Products" />
-    <div className='compare-product-wrapper py-5 home-wrapper-2'>
-        <div className="container-xxl">
-            <div className="row">
-                <ProductCompareCard />
-                <ProductCompareCard />
-                <ProductCompareCard />
-                <ProductCompareCard />
-            </div>
-        </div>
-    </div>
+    <Container class1='compare-product-wrapper py-5 home-wrapper-2'>
+      <div className="row">
+          <ProductCompareCard />
+          <ProductCompareCard />
+          <ProductCompareCard />
+          <ProductCompareCard />
+      </div>
+    </Container>
   </>
 }
 
