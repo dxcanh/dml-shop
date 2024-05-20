@@ -1,9 +1,12 @@
+
+
 import React from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import { BsFacebook, BsPinterest, BsTwitter } from 'react-icons/bs'
+import blog from '../images/blog-1.jpg'
 
 const SingleBlog = () => {
 
@@ -32,7 +35,7 @@ const SingleBlog = () => {
                         <div className="single-blog-card">
                             <h3 className="title mb-3">New era with Apple Vision Pro</h3>
                             <img 
-                                src="..//images/blog-1.jpg" 
+                                src={blog}
                                 className='img-fluid w-100' 
                                 alt="blog" 
                             />

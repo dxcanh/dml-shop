@@ -1,3 +1,7 @@
+
+import cross from '../images/cross.svg';
+import watch from '../images/watch.jpg';
+
 import React from 'react'
 
 const WishlistCard = () => {
@@ -5,13 +9,13 @@ const WishlistCard = () => {
     <div className="col-3">
         <div className="wishlist-card position-relative">
             <img 
-                src="/images/cross.svg" 
+                src={ cross } 
                 alt="cross"
                 className='position-absolute cross img-fluid' 
             />
             <div className="wishlist-card-image">
                 <img 
-                    src="/images/watch.jpg" 
+                    src={ watch } 
                     className='img-fluid w-100' 
                     alt="watch" 
                 />

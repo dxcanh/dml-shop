@@ -1,3 +1,18 @@
+
+import camera from '../images/camera.jpg';
+import catbanner01 from '../images/catbanner-01.jpg';
+import catbanner02 from '../images/catbanner-02.jpg';
+import catbanner03 from '../images/catbanner-03.jpg';
+import catbanner04 from '../images/catbanner-04.jpg';
+import famous01 from '../images/famous-01.png';
+import famous02 from '../images/famous-02.png';
+import famous03 from '../images/famous-03.png';
+import famous04 from '../images/famous-04.png';
+import headphone from '../images/headphone.jpg';
+import mainbanner1 from '../images/main-banner-1.jpg';
+import speaker from '../images/speaker.jpg';
+import tv from '../images/tv.jpg';
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from 'react-fast-marquee'
@@ -5,17 +20,18 @@ import BlogCard from '../components/BlogCard'
 import ProductCard from '../components/ProductCard'
 import SpecialProduct from '../components/SpecialProduct'
 import Meta from '../components/Meta'
+import Container from '../components/Container'
+import { services } from '../utils/Data'
 
 const Home = () => {
   return <>
     <Meta title='UET E-Commerce'></Meta>
-    <section className="home-wrapper-1 py-5">
-      <div className="container-xxl">
+    <Container class1='home-wrapper-1 py-5'>
         <div className="row">
           <div className="col-6">
             <div className="main-banner position-relative">
               <img 
-                src="/images/main-banner-1.jpg" 
+                src={ mainbanner1 } 
                 className='img-fluid rounded-3' 
                 alt="main banner" 
               />
@@ -31,7 +47,7 @@ const Home = () => {
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-10">
               <div className="small-banner position-relative">
                 <img 
-                  src="/images/catbanner-01.jpg" 
+                  src={ catbanner01 } 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -43,7 +59,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="/images/catbanner-02.jpg" 
+                  src={ catbanner02 } 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -55,7 +71,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="/images/catbanner-03.jpg" 
+                  src={ catbanner03 } 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -67,7 +83,7 @@ const Home = () => {
               </div>
               <div className="small-banner position-relative">
                 <img 
-                  src="/images/catbanner-04.jpg" 
+                  src={ catbanner04 } 
                   className='img-fluid rounded-3' 
                   alt="main banner" 
                 />
@@ -80,53 +96,35 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className="home-wrapper-2 py-5">
-      <div className="container-xxl">
+    </Container>
+    <Container className="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="services d-flex align-items-center justify-content-between">
-              <div className='d-flex align-items-center gap-15'>
-                <img src="/images/service.png" alt="services" />
+              {/* <div className='d-flex align-items-center gap-15'>
+                <img src="" alt="services" />
                 <div>
-                  <h6>Free shipping</h6>
-                  <p className='mb-0'>For orders over $20</p>
+                  <h6></h6>
+                  <p className='mb-0'></p>
                 </div>
-              </div>
-              <div className='d-flex align-items-center gap-15'>
-                <img src="/images/service-02.png" alt="services" />
-                <div>
-                  <h6>Surprise offers weekly</h6>
-                  <p className='mb-0'>Save up to 25%</p>
-                </div>
-              </div>
-              <div className='d-flex align-items-center gap-15'>
-                <img src="/images/service-03.png" alt="services" />
-                <div>
-                  <h6>24/7 support</h6>
-                  <p className='mb-0'>Shop with an expert</p>
-                </div>
-              </div>
-              <div className='d-flex align-items-center gap-15'>
-                <img src="/images/service-04.png" alt="services" />
-                <div>
-                  <h6>Affordable products</h6>
-                  <p className='mb-0'>Get factory direct price</p>
-                </div>
-              </div>
-              <div className='d-flex align-items-center gap-15'>
-                <img src="/images/service-05.png" alt="services" />
-                <div>
-                  <h6>Secure payments</h6>
-                  <p className='mb-0'>100% protected payments</p>
-                </div>
-              </div>
+              </div> */}
+              {services?.map((i, j) => {
+                return (
+                  <div className='d-flex align-items-center gap-15' key={j}>
+                    <img src="i.image" alt="services" />
+                    <div>
+                      <h6>{i.title}</h6>
+                      <p className='mb-0'>{i.tagline}</p>
+                    </div>
+                  </div>
+                )
+              })
+              
+              }
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </Container>
     <section className="home-wrapper-2 py-5">
       <div className="container-xxl">
         <div className="row">
@@ -137,56 +135,56 @@ const Home = () => {
                   <h6>Cameras</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/camera.jpg" alt="camera" />
+                <img src={ camera } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart TVs</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/tv.jpg" alt="camera" />
+                <img src={ tv } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Speakers</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/speaker.jpg" alt="camera" />
+                <img src={ speaker } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Accesories</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/headphone.jpg" alt="camera" />
+                <img src={ headphone } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Cameras</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/camera.jpg" alt="camera" />
+                <img src={ camera } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart TVs</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/tv.jpg" alt="camera" />
+                <img src={ tv } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Smart watches</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/speaker.jpg" alt="camera" />
+                <img src={ speaker } alt="camera" />
               </div>
               <div className='d-flex align-items-center'>
                 <div>
                   <h6>Accesories</h6>
                   <p>10 Items</p>
                 </div>
-                <img src="/images/headphone.jpg" alt="camera" />
+                <img src={ headphone } alt="camera" />
               </div>
             </div>
           </div>
@@ -213,7 +211,7 @@ const Home = () => {
         <div className="row">
           <div className="col-3">
             <div className="famous-card position-relative">
-              <img src="/images/famous-01.png" className='img-fluid' alt="famous" />
+              <img src={ famous01 } className='img-fluid' alt="famous" />
               <div className="famous-content position-absolute">
                 <h5>Big screen</h5>
                 <h6>Smart Watch Series 7</h6>
@@ -223,7 +221,7 @@ const Home = () => {
           </div>
           <div className="col-3">
             <div className="famous-card position-relative">
-              <img src="/images/famous-02.png" className='img-fluid' alt="famous" />
+              <img src={ famous02 } className='img-fluid' alt="famous" />
               <div className="famous-content position-absolute">
                 <h5 className='text-dark'>Smart speaker</h5>
                 <h6 className='text-dark'>HomePod mini</h6>
@@ -233,7 +231,7 @@ const Home = () => {
           </div>
           <div className="col-3">
             <div className="famous-card position-relative">
-              <img src="/images/famous-03.png" className='img-fluid' alt="famous" />
+              <img src={ famous03 } className='img-fluid' alt="famous" />
               <div className="famous-content position-absolute">
                 <h5 className='text-dark'>Studio display</h5>
                 <h6 className='text-dark'>Macbook Air 2022</h6>
@@ -243,7 +241,7 @@ const Home = () => {
           </div>
           <div className="col-3">
             <div className="famous-card position-relative">
-              <img src="/images/famous-04.png" className='img-fluid' alt="famous" />
+              <img src={ famous04 } className='img-fluid' alt="famous" />
               <div className="famous-content position-absolute">
                 <h5 className='text-dark'>Excellent performance</h5>
                 <h6 className='text-dark'>iPhone 15 Pro</h6>
