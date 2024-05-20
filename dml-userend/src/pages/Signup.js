@@ -35,7 +35,7 @@ const Signup = () => {
                         <CustomInput 
                             className="mt-1"
                             type="password" 
-                            name='lastname' 
+                            name='password' 
                             placeholder='Password'
                         />
                         <div>
