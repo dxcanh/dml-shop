@@ -47,7 +47,7 @@ Nếu bạn gặp bất kỳ vấn đề nào khi sử dụng ứng dụng, vui 
 
 ### Tác Giả
 
-Ứng dụng được phát triển bởi: Trần Công Minh.
+Ứng dụng được phát triển bởi: DML Team.
 
 ### Giấy Phép
 
